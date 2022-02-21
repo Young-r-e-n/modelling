@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+    body{ 
+        background-color: black;
+    }
+    @media screen and (min-width:600px) {
+        .topnav{
+           
+            padding-right: 200px;
+        }
+    }
+  
+    .topnav{
+        background-color: #333;
+        overflow: hidden;
+        padding-right: 12%;
+        padding-top: 0;
+      
+    }
+    .topnav a{
+        float: right;
+        margin-right: 20px;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        
+    }
+    .topnav a:hover{ 
+        background-color: violet;
+        color: #333;
+        border-radius: 5px;
+    }
+
+    .topnav a.active{
+        background-color: violet;
+        color: #f2f2f2;
+        border-radius: 5px;
+    }
+
+    .topnav a.F{
+        float: left;
+    }
+    .M{
+        color: palevioletred;
+    }
+
+   .slideshw{
+       position:relative;
+       display: flex;
+       height: 25%;
+       justify-content: center;
+       background-image: url(b.jpg);
+   }
+   .mySlides {
+    display: none;
+    position: relative;
+
+  }
+  .mid{
+    position: absolute;
+    top: 110px;
+    right: 80px;
+    float: right;
+}
+
+   .prev,
+   .next {
+     cursor: pointer;
+     position: absolute;
+     top: 40%;
+     width: auto;
+     padding: 16px;
+     margin-top: -50px;
+     color: white;
+     font-weight: bold;
+     font-size: 20px;
+     border-radius: 0 3px 3px 0;
+     user-select: none;
+     -webkit-user-select: none;
+   }
+
+   .next {
+    right: 300px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev{
+    left:300px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+.i{ 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  .bh{
+margin-left: 100px;
+background-color: rgb(0, 0, 0);
+  }
+  .bottomheader{
+    float: left;
+
+padding-right: 12px;
+} 
+
+div.gallery {
+    margin: 5px;
+    margin-top: 80px;
+    padding-top: 0;
+    float: left;
+    width: 200px;
+    color: white;
+    padding-right: 0;
+    background-color: black;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #d87093;
+    border-radius: 10px;
+    margin-right: 0%;
+    margin-bottom: 100px;
+    
+    overflow: hidden;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 50px;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  .bottom{
+    padding-top: 1%;
+      padding-left: 18%;
+     
+  }
+    </style>
+
+    <script>
+var slideIndex = 1;
+
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+currentSlide(1);
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="#Contact">CONTACT</a> 
+        <a href="#About me">ABOUT  ME</a>
+        <a href="#Blog">BLOG</a>
+        <a class="active" href="#home">HOME</a>
+        <a href="#name" class="F">Faith <span class="M">Muia</span></a>
+       </div>
+
+       <div class="slideshw" data-component="slideshow" >
+
+        <div class="mid"><h2 style="color: palevioletred;">JUST<br></h2>
+            <h2 style="color: white;">A GIRL <br></h2>
+            <h2 style="color: palevioletred;">NAMED<br></h2>
+            <h2 style="color: white;"><i>FAITH</i> <br></h2>
+        </div>
+           <div role="list"> 
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                  <img src="2.jpg" style="width:100; height:400;">
+                 
+                </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                  <img src="3.jpg" style="width:1000; height:800;">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                  <img src="4.jpg" style="width:1000; height:800;">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                  <img src="2.jpg" style="width:1000; height:800;">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                  <img src="3.jpg" style="width:1000; height:800;">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                  <img src="4.jpg" style="width:1000; height:800;">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+           </div>    
+       </div>
+
+      <div class="i" style="background-color: saddlebrown;">
+        <div class="bh">
+            <div class="bottomheader"style="color: palevioletred; "><h2>TOP</h2></div>
+            <div class="bottomheader" style="color: white;"><h2>PICTURES</h2></div>
+           </div>
+      </div> 
+
+
+      <div class="bottom" valign="bottom">
+        <div class="gallery">
+            <a target="_blank" href="3.jpg">
+              <img src="3.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="2.jpg">
+              <img src="2.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="4.jpg">
+              <img src="4.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="3.jpg">
+              <img src="3.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+          </div>
+</body>
+</html>
